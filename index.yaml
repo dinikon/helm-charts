@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  dniko-api:
+  - apiVersion: v2
+    appVersion: v0.0.1
+    created: "2025-08-16T10:35:36.34828421Z"
+    description: A Helm chart for Kubernetes
+    digest: e8249843f48edc4f1499c7d217ed8861ff7a768153d406ee18351e33a5642ddf
+    name: dniko-api
+    type: application
+    urls:
+    - https://github.com/dinikon/helm-charts/releases/download/dniko-api-0.0.0/dniko-api-0.0.0.tgz
+    version: 0.0.0
+generated: "2025-08-16T10:35:36.348299724Z"
