@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/dinikon/helm-charts/releases/download/dniko-api-0.0.0/dniko-api-0.0.0.tgz
     version: 0.0.0
-generated: "2025-08-16T10:35:36.348299724Z"
+  dniko-web:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2025-08-16T10:51:08.221478526Z"
+    description: A Helm chart for Kubernetes
+    digest: aecbb1be458940c8db075a2f9b2f97b7b033986eafb47b357293920f0fce1cbe
+    name: dniko-web
+    type: application
+    urls:
+    - https://github.com/dinikon/helm-charts/releases/download/dniko-web-0.0.0/dniko-web-0.0.0.tgz
+    version: 0.0.0
+generated: "2025-08-16T10:51:08.221492038Z"
