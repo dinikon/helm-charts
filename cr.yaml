@@ -1,0 +1,28 @@
+# cr.yaml — конфиг для helm/chart-releaser (CLI "cr")
+# https://github.com/helm/chart-releaser
+
+# Владелец и репозиторий, где лежат чарты
+owner: dinikon        # напр. dinikon или ваша org
+git-repo: helm-charts        # напр. helm-charts (или ваш репо с charts/)
+charts-repo: 'https://dinikon.github.io/helm-charts'
+
+# Где искать/класть пакеты чартов
+package-path: .cr-release-packages
+
+# Как называть GitHub Release (по метаданным чарта)
+release-name-template: "{{ .Name }}-{{ .Version }}"
+
+# Поведение публикации
+skip-existing: true           # не падать, если релиз уже есть
+generate-release-notes: true  # автоописание релиза на стороне GitHub
+make-release-latest: true     # помечать релиз как 'latest'
+packages-with-index: false     # хранить .tgz рядом с index.yaml в gh-pages
+
+# GitHub Pages-ветка и путь к индексу
+pages-branch: gh-pages
+pages-index-path: index.yaml
+
+# (опционально, обычно не нужно)
+# git-base-url: https://api.github.com/
+# git-upload-url: https://uploads.github.com/
+# remote: origin
