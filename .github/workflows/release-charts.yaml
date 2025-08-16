@@ -12,8 +12,8 @@ on:
       - 'charts/**/Chart.yaml'
 
 permissions:
-  contents: write   # для коммитов/релизов/gh-pages
-  packages: write   # для OCI в GHCR
+  contents: write
+  packages: write
 
 jobs:
   release:
