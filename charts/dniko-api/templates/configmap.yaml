@@ -3,13 +3,13 @@ kind: ConfigMap
 metadata:
   name: {{ include "dNiko-core-api.fullname" . }}-config
 data:
-  DB_HOST: {{ .Values.serviceConfig.DB_HOST | quote }}
-  DB_PORT: {{ .Values.serviceConfig.DB_PORT | quote }}
-  DB_DATABASE: {{ .Values.serviceConfig.DB_DATABASE | quote }}
-
-  LOG_LEVEL: {{ .Values.serviceConfig.LOG_LEVEL | quote }}
-  LOG_FILE: {{ .Values.serviceConfig.LOG_FILE | quote }}
-  LOG_FILE_MAX_SIZE: {{ .Values.serviceConfig.LOG_FILE_MAX_SIZE | quote }}
-  LOG_FILE_BACKUP_COUNT: {{ .Values.serviceConfig.LOG_FILE_BACKUP_COUNT | quote }}
-  LOG_DATEFORMAT: {{ .Values.serviceConfig.LOG_DATEFORMAT | quote }}
-  LOG_TZ: {{ .Values.serviceConfig.LOG_TZ | quote }}
+{{- $cfg := .Values.serviceConfig | default (dict) -}}
+{{- $secretKeys := .Values.secretKeys | default (list) -}}
+{{- $includeEmpty := .Values.serviceConfigIncludeEmpty | default false -}}
+{{- range $k, $v := $cfg }}
+{{- if not (has $k $secretKeys) }}
+{{- if or $includeEmpty (not (kindIs "invalid" $v)) (ne (printf "%v" $v) "") }}
+  {{ $k }}: {{ printf "%v" $v | quote }}
+{{- end }}
+{{- end }}
+{{- end }}

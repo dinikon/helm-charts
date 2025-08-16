@@ -88,19 +88,9 @@ tolerations: []
 affinity: {}
 
 serviceConfig:
-  DB_USERNAME:
-  DB_PASSWORD:
-  DB_HOST:
-  DB_PORT:
-  DB_DATABASE:
-  LOG_LEVEL: ""
-  # Log file path
-  LOG_FILE: ""
-  # Log file max size, the unit is MB
-  LOG_FILE_MAX_SIZE: 0
-  # Log file max backup count
-  LOG_FILE_BACKUP_COUNT: 0
-  # Log dateformat
-  LOG_DATEFORMAT: ""
-  # Log Timezone
-  LOG_TZ: ""
+  DB_PASSWORD: super-secret
+  REDIS_PASSWORD: dniko12345
+
+secretKeys:
+  - DB_PASSWORD
+  - REDIS_PASSWORD
