@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "dniko-api.fullname" . }}
+  name: {{ include "dniko-api.fullname" . }}-c-worker
   labels:
     {{- include "dniko-api.labels" . | nindent 4 }}
 spec:
@@ -38,18 +38,9 @@ spec:
                 name: {{ include "dniko-api.fullname" . }}-config
             - secretRef:
                 name: {{ include "dniko-api.fullname" . }}-secret
-          ports:
-            - name: http
-              containerPort: {{ .Values.service.port }}
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /api/v1/system/liveness
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /api/v1/system/readiness
-              port: http
+          env:
+            - name: MODE
+              value: worker
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
