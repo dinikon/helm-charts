@@ -3,6 +3,16 @@ entries:
   dniko-api:
   - apiVersion: v2
     appVersion: v0.1.0
+    created: "2025-08-18T20:29:29.475159005Z"
+    description: A Helm chart for Kubernetes
+    digest: 3ac3e4b7a40b73499ce901bbeee049f5ee105044c41a13749344522cadfc40b9
+    name: dniko-api
+    type: application
+    urls:
+    - https://github.com/dinikon/helm-charts/releases/download/dniko-api-0.1.1/dniko-api-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: v0.1.0
     created: "2025-08-16T23:22:17.855994055Z"
     description: A Helm chart for Kubernetes
     digest: b293e17c544e4fc946797e08a47c8975f8062cdf9c1ed14080ec8812cda80175
@@ -32,4 +42,4 @@ entries:
     urls:
     - https://github.com/dinikon/helm-charts/releases/download/dniko-web-0.0.0/dniko-web-0.0.0.tgz
     version: 0.0.0
-generated: "2025-08-16T23:22:17.856025719Z"
+generated: "2025-08-18T20:29:29.475168255Z"
