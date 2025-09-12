@@ -4,4 +4,4 @@
 
 image:
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "sha-f26715da7469c25be3087cf6ccef5da7da73e4c0"
+  tag: "sha-fa356659b600a32ac6791941706b5fc74bed7e24"
