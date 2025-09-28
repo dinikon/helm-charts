@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "sqz-api.fullname" . }}-config
+data:
+{{- $cfg := .Values.serviceConfig | default (dict) -}}
+{{- $secretKeys := .Values.secretKeys | default (list) -}}
+{{- $includeEmpty := .Values.serviceConfigIncludeEmpty | default false -}}
+{{- range $k, $v := $cfg }}
+{{- if not (has $k $secretKeys) }}
+{{- if or $includeEmpty (not (kindIs "invalid" $v)) (ne (printf "%v" $v) "") }}
+  {{ $k }}: {{ printf "%v" $v | quote }}
+{{- end }}
+{{- end }}
+{{- end }}
