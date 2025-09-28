@@ -42,4 +42,15 @@ entries:
     urls:
     - https://github.com/dinikon/helm-charts/releases/download/dniko-web-0.0.0/dniko-web-0.0.0.tgz
     version: 0.0.0
-generated: "2025-08-18T20:29:29.475168255Z"
+  sqz-api:
+  - apiVersion: v2
+    appVersion: v0.0.1
+    created: "2025-09-28T13:32:51.265170966Z"
+    description: A Helm chart for Kubernetes
+    digest: 9a27536435afe89f0dcbd2b13ac7d588d6746bb42e23b791831bdf05dbca0a47
+    name: sqz-api
+    type: application
+    urls:
+    - https://github.com/dinikon/helm-charts/releases/download/sqz-api-0.1.0/sqz-api-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-09-28T13:32:51.26518392Z"
