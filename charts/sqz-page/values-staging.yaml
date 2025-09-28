@@ -1,0 +1,6 @@
+# Default values for dNiko-core-api.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  tag: "sha-"
