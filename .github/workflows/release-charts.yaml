@@ -80,7 +80,7 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         uses: azure/setup-helm@v4
         with:
-          version: v4.3.1
+          version: v3.14.4
 
       - name: Add dependency chart repos (optional)
         if: steps.diff.outputs.changed == 'true'
