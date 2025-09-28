@@ -44,6 +44,16 @@ entries:
     version: 0.0.0
   sqz-api:
   - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2025-09-28T15:11:35.929009051Z"
+    description: A Helm chart for Kubernetes
+    digest: a36d607d5b123dde833276b2d04120c6349aebf63dc9fb69a528512074e5665f
+    name: sqz-api
+    type: application
+    urls:
+    - https://github.com/dinikon/helm-charts/releases/download/sqz-api-0.2.0/sqz-api-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: v0.0.1
     created: "2025-09-28T13:32:51.265170966Z"
     description: A Helm chart for Kubernetes
@@ -53,4 +63,4 @@ entries:
     urls:
     - https://github.com/dinikon/helm-charts/releases/download/sqz-api-0.1.0/sqz-api-0.1.0.tgz
     version: 0.1.0
-generated: "2025-09-28T13:32:51.26518392Z"
+generated: "2025-09-28T15:11:35.929026103Z"
