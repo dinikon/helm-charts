@@ -21,7 +21,7 @@ jobs:
     # - обычный push в main
     # - или PR был действительно смёржен
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
-    runs-on: arc-runners-helm-charts
+    runs-on: ubuntu-latest
 
     env:
       PAGES_BRANCH: gh-pages
@@ -80,7 +80,7 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         uses: azure/setup-helm@v4
         with:
-          version: v3.14.4
+          version: v4.3.1
 
       - name: Add dependency chart repos (optional)
         if: steps.diff.outputs.changed == 'true'
